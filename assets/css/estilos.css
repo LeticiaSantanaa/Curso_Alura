@@ -33,6 +33,14 @@ body{
     background-color: #15191C;
     width: 75vw;
     height: 100vh;
+    
+    transition: .25s ;
+    position: absolute; /* aqui to escondendo o menu*/
+    left: -100vw; /* aqui to escondendo o menu lateral*/
+}
+.menu-lateral--ativo{
+    left: 0;/* aqui to mostrando o menu lateral que ta sendo chamado no JS quando clica no botao*/
+    transition: .25s ;
 }
 .menu-lateral__logo{
     width: 118px;
