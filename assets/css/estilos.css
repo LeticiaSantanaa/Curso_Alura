@@ -318,6 +318,7 @@ body{
     .secao{
         grid-template-columns: repeat(4, 1fr);
     }
+    
     .destaque-video{
         grid-area: destaque-video;
     }
