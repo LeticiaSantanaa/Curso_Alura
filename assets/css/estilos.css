@@ -45,6 +45,7 @@ body{
         height: 80px;
         box-sizing: border-box;
         column-gap: 32px;
+        grid-column: 2;
     }
     .cabecalho__menu{
         display: none;
@@ -143,6 +144,8 @@ body{
     .menu-lateral{
         position: static;
         width: 200px;
+        grid-column: 1; /*coloquei o menu lateral na primeira coluna e...*/
+        grid-row:1 / span 2;/*coloquei o menu lateral na primeira linha e depois vai da um span de 2 linhas*/
     }
 }
 .principal{
@@ -162,8 +165,19 @@ body{
     .principal{
         display: grid;
         grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-video destaque-video videos-recentes"
+            "secao-videos secao-videos secao-videos"
+            "produtos-recentes destaque-produtos destaque-produtos"
+            "secao-produtos secao-produtos secao-produtos"
+            ;
         column-gap: 32px;
         padding: 16px 60px;
+        grid-column: 2;
+    }
+    .titulo-secao{
+        grid-column: span 4;
     }
 }
 .cartao{
@@ -171,6 +185,9 @@ body{
     border-radius: 15px;
     overflow: hidden; /*qualquer coisa que passar os limites da borda ou limites do cartao desse cartao vou esconder*/
     background-color: #2C343A;
+}
+.cartao__imagem--desktop{
+    display: none;
 }
 .cartao--destaque{
     margin-bottom: 16px;
@@ -236,6 +253,20 @@ body{
     display: none;
 }
 @media screen and (min-width: 1300px) {
+    .cartao--destaque{
+        margin-bottom: 0;
+    }
+    .cartao__imagem--mobile{
+        display: none;
+    }
+    .cartao__imagem--desktop{
+        display: block;
+    }
+    .cartao__botao--destaque{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+   
     .cartao--recentes{
         display: grid;
         grid-template-columns: auto auto;
@@ -244,6 +275,7 @@ body{
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
     .cartao--recentes .cartao__titulo{
         grid-column: auto;
@@ -281,4 +313,28 @@ body{
 .secao{
     display: grid;
     gap: 16px; /*espaçamento entre as linhas e colunas*/
+}
+@media screen and (min-width:1300px) {
+    .secao{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .destaque-video{
+        grid-area: destaque-video;
+    }
+    .videos-recentes{
+        grid-area: videos-recentes;
+    }
+    .secao-videos{
+        grid-area: secao-videos;
+    }
+    .destaque-produtos{
+        grid-area: destaque-produtos;
+    }
+    .produtos-recentes{
+        grid-area: produtos-recentes;
+    }
+    .secao-produtos{
+        grid-area: secao-produtos;
+    }
+    
 }
