@@ -1,0 +1,22 @@
+.grid{
+    border: 1px solid black;
+    width: 500px;
+}
+
+.item{
+    background-color: blueviolet;
+    text-align: center;
+    margin: 2px;
+}
+.grid-template-colummns{
+    display: grid;
+    grid-template-columns: 200px 200px ;
+}
+.grid-template-colummns-2{
+    display: grid;
+    grid-template-columns: 100px 100px 100px ;
+}
+.grid-template-colummns-3{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+}
