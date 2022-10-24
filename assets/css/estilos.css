@@ -24,6 +24,7 @@ body{
 .cabecalho__menu i::before{
     content: "\e904";
     font-size: 24px;
+    background-color: aliceblue;
 }
 .cabecalho__notificacao i::before{
     content: "\e906";
