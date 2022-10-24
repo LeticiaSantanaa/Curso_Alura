@@ -21,3 +21,14 @@
     display: grid;
     grid-template-rows: 50px 100px 200px 300px 400px 500px;
 }
+.grid-template-rows-4{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-rows: 1fr 2fr ;
+}
+.item1{
+    width: 60px;
+    background-color: aliceblue;
+    color: black;
+
+}
