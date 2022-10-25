@@ -40,3 +40,12 @@ body{
 .cartao__imagem--mobile{
     width: 100%;
 }
+.cartao__conteudo{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr ; /* to colocando as colunas do mesmo tamanho  */
+    gap: 8px;
+}
+.cartao__destaque{
+    grid-column: span 2;
+}
