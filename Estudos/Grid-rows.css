@@ -3,7 +3,6 @@
     width: 500px;
     margin-top: 5%;
 }
-
 .item{
     background-color: blueviolet;
     text-align: center;
@@ -44,7 +43,12 @@
     grid-template-columns: 50px 110px 50px;
     grid-template-rows: 50px 20px 10px;
 }
-
+.grid-template-rows-6{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 50px 20px 10px; 
+}
 .container{
     display: grid;
     grid-template-columns: 50px 110px 50px;
