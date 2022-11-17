@@ -72,3 +72,11 @@ body{
 .descricao__texto{
     color: var(--cinza-secundario);
 }
+.secundario__botao{
+    display: inline-block; /*Ele transformou o elemento em linha e tentou pegar as melhores partes da linha e do bloco, por isso ele ta so no espaço dele mesmo */
+    margin-top: 1em;
+
+}
+.container__descricao{
+    padding: 2em;
+}
